@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background: #f2f2f2;
+}
+nav{
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    width: 65px;
+    background: #fff;
+    overflow: hidden;
+    transition: all .1s ease;
+}
+nav:hover{
+    width: 280px;
+    transition: all .1s ease;
+}
+.logo{
+    text-align: center;
+    display: flex;
+    margin: 10px 0 0 10px;
+    padding-bottom: 3rem;
+}
+.logo img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.logo span{
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    margin-top: 10px;
+    text-decoration: uppercase;
+}
+ul li .icon{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+a{
+    position: relative;
+    width: 280px;
+    font-size: 14px;
+    color: rgb(85, 83, 83);
+    display: flex;
+    align-content: center;
+    padding: 10px;
+}
+nav .icon,
+nav i{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+.nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+a:hover{
+    background: #eee;
+}
+a:hover i{
+    color: #34AF6D;
+    transition: all 0.5s ease;
+}
+.logout{
+    position: absolute;
+    bottom: 0;
+}
+.container{
+    display: flex;
+}
+.main{
+    position: relative;
+    padding: 20px;
+    width: 100%;
+}
+.main .certificaciones{
+    display: flex;
+    width: 100%;
+}
+.certificaciones .Seminario{
+    display: none;
+    width: 25%;
+    margin: 10px;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0,0.1);
+}
+.certificaciones .Seminario img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.certificaciones .Seminario h4{
+    text-transform: uppercase;
+}
+.certificaciones .Seminario p{
+    font-size: 12px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.certificaciones table{
+    margin: auto;
+}
+.certificaciones .per span{
+    padding: 5px;
+    border-radius: 10px;
+    background: rgb(223, 223, 223);
+}
+.certificaciones td{
+    font-size: 14px;
+    padding-right: 15px;
+}
+.certificaciones .Seminario button{
+    width: 100%;
+    margin-top: 8px;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid #F28705;
+}
+.certificaciones .Seminario button:hover{
+    background: #F28705;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+#basicoAvent:checked ~ .basicaAvent{
+    display: block;
+}
+#basicoConqu:checked ~ .basicaConquis{
+    display: block;
+}
+#directAvent:checked ~ .directorAvent{
+    display: block;
+}
+#directConqu:checked ~ .directorConquis{
+    display: block;
+}

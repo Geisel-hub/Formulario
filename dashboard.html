@@ -1,11 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola Mundo</title>
-</head>
-<body>
-    <h1>Hola Mundo</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menu Principal | Zona 2</title>
+
+        <!--Iconos a utilizar-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <link rel="stylesheet" href="CSS/dashboard.css">
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" class="logo">
+                            <img src="IMG/CapacitacionPerfil.png" alt="PerfilZona">
+                            <span class="nav-item">Capacitación</span>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class='bx bxs-dashboard'></i>
+                            <span class="nav-item">Menu Principal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="basicaAvent()">
+                            <img src="IMG/Icons/Icono_Basic_Aventu-Photoroom.png" class="icon">
+                            <label for="" class="nav-item">Básica Aventurero</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="basicaConqui()">
+                            <img src="IMG/Icons/Icono_Basic_Conquis-Photoroom.png" class="icon">
+                            <label for="" class="nav-item">Básica Conquistador</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="directorAvent()">
+                            <img src="IMG/Icons/Icono_Director_Aventu.jpg-Photoroom.png" class="icon">
+                            <label for="" class="nav-item">Director Aventurero</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="directorConqui()">
+                            <img src="IMG/Icons/Icono_Director_Conquis-Photoroom.png" class="icon">
+                            <label for="" class="nav-item">Director Conquistador</label>
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="logout">
+                            <i class='bx bx-log-out'></i>
+                            <span class="nav-item">Desconectar</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <section class="main">                
+                
+                <div class="main-top">
+                    <h1>Certificaciones</h1>
+                </div>
+                <div class="certificaciones">
+                    <input type="checkbox" name="basicoAvent" id="basicoAvent" style="display: none;">
+                    <input type="checkbox" name="basicoConqu" id="basicoConqu" style="display: none;">
+                    <input type="checkbox" name="directAvent" id="directAvent" style="display: none;">
+                    <input type="checkbox" name="directConqu" id="directConqu" style="display: none;">
+                    <div class="Seminario basicaAvent" id="bAvent">
+                        <img src="IMG/Icons/Icono_Basic_Aventu-Photoroom.png">
+                        <h4>ADV 001: Propósito, Historia y la Iglesia</h4>
+                        <p>Certificación Básica Aventureros</p>
+                        <div class="per">
+                            <table>
+                                <tr>
+                                    <td><span>85%</span></td>
+                                    <td><span>87%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Examen</td>
+                                    <td>Tarea</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button value="0" onclick="">Ver Seminario</button>
+                    </div>
+                    <div class="Seminario basicaConquis" id="bConquis">
+                        <img src="IMG/Icons/Icono_Basic_Conquis-Photoroom.png">
+                        <h4>ADV 001: Propósito, Historia y la Iglesia</h4>
+                        <p>Certificación Básica Conquistadores/Guías</p>
+                        <div class="per">
+                            <table>
+                                <tr>
+                                    <td><span>85%</span></td>
+                                    <td><span>87%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Examen</td>
+                                    <td>Tarea</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button value="0" onclick="">Ver Seminario</button>
+                    </div>
+                    <div class="Seminario directorAvent" id="dAvent">
+                        <img src="IMG/Icons/Icono_Director_Aventu.jpg-Photoroom.png">
+                        <h4>LEAD 001: Introducción a las Habilidades de Liderazgo</h4>
+                        <p>Certificación Directores de Aventureros</p>
+                        <div class="per">
+                            <table>
+                                <tr>
+                                    <td><span>85%</span></td>
+                                    <td><span>87%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Examen</td>
+                                    <td>Tarea</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button value="0" onclick="">Ver Seminario</button>
+                    </div>
+                    <div class="Seminario directorConquis" id="dConqui">
+                        <img src="IMG/Icons/Icono_Director_Conquis-Photoroom.png">
+                        <h4>LEAD 001: Introducción a las Habilidades de Liderazgo</h4>
+                        <p>Certificación Directores de Conquistadores/Guías</p>
+                        <div class="per">
+                            <table>
+                                <tr>
+                                    <td><span>85%</span></td>
+                                    <td><span>87%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Examen</td>
+                                    <td>Tarea</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button value="0" onclick="">Ver Seminario</button>
+                    </div>
+                </div>
+            </section>
+        </div>        
+    </body>
+    <script src="JS/dashboard.js"></script>
 </html>

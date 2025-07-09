@@ -24,7 +24,7 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
             return
         }
 
-        if(user.PasswordHash === passwordHash){
+        if(user.PasswordHash === passwr){
             //Enviar al Dashboard con los datos
             const query = new URLSearchParams(user).toString()
             window.location.href = "dashboard.html?" + query
