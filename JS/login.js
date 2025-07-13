@@ -26,8 +26,11 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
 
         if(user.PasswordHash === passwr){
             //Enviar al Dashboard con los datos
-            const query = new URLSearchParams(user).toString()
-            window.location.href = "dashboard.html?" + query
+            //const query = new URLSearchParams(user).toString()
+            //window.location.href = "dashboard.html?" + query
+            sessionStorage.setItem("Codigo", user.Codigo)
+            sessionStorage.setItem("Nombre", user.Nombre)
+            window.location.href = "dashboard.html"
         }else{
             document.getElementById("mensaje").textContent = "Contraseña Incorrecta"
         }

@@ -13,46 +13,16 @@
     <body>
         <div class="container">
             <nav>
-                <ul>
+                <ul id="listaNav">
                     <li>
                         <a href="#" class="logo">
                             <img src="IMG/CapacitacionPerfil.png" alt="PerfilZona">
                             <span class="nav-item">Capacitación</span>                            
                         </a>
                     </li>
+                    <!--En esta Sección se debe de cargar los Certificados y Accesos Autorizados-->
                     <li>
-                        <a href="#">
-                            <i class='bx bxs-dashboard'></i>
-                            <span class="nav-item">Menu Principal</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" onclick="basicaAvent()">
-                            <img src="IMG/Icons/Icono_Basic_Aventu-Photoroom.png" class="icon">
-                            <label for="" class="nav-item">Básica Aventurero</label>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" onclick="basicaConqui()">
-                            <img src="IMG/Icons/Icono_Basic_Conquis-Photoroom.png" class="icon">
-                            <label for="" class="nav-item">Básica Conquistador</label>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" onclick="directorAvent()">
-                            <img src="IMG/Icons/Icono_Director_Aventu.jpg-Photoroom.png" class="icon">
-                            <label for="" class="nav-item">Director Aventurero</label>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" onclick="directorConqui()">
-                            <img src="IMG/Icons/Icono_Director_Conquis-Photoroom.png" class="icon">
-                            <label for="" class="nav-item">Director Conquistador</label>
-                            
-                        </a>
-                    </li>
-                    <li>
-                        <a href="index.html" class="logout">
+                        <a href="#" class="logout" onclick="desconectar()">
                             <i class='bx bx-log-out'></i>
                             <span class="nav-item">Desconectar</span>
                         </a>
@@ -63,7 +33,7 @@
             <section class="main">                
                 
                 <div class="main-top">
-                    <h1>Certificaciones</h1>
+                    <h1 id="user">Certificaciones</h1>
                 </div>
                 <div class="certificaciones">
                     <input type="checkbox" name="basicoAvent" id="basicoAvent" style="display: none;">
@@ -87,6 +57,38 @@
                             </table>
                         </div>
                         <button value="0" onclick="">Ver Seminario</button>
+                        <!--En esta sección cargaremos el Certificado-->
+                        <div class="listaTalleres">
+                            <input type="checkbox" id="ADV001" class="cbTaller">
+                            <div class="taller ADV001">
+                                <h2>Titulo del Certificado</h2>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/vrFoiwRk67U?si=pqMa6CPIXwL_qrnw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" style="width: 100%;" allowfullscreen></iframe>
+                                <p>Este taller presenta una introducción al ministerio del club desde la perspectiva del Club de Aventureros. Compara y contrasta el programa y el propósito del Club de Aventureros y su papel en el desarrollo de la fe. Este ministerio involucra el ministerio de la familia, el ministerio infantil y el ministerio del Club de Conquistadores. <br>
+                                   1er Seminario de la Certificación Básica para lideres de Aventureros (EMC). <br>
+                                   Ministerios Juveniles de  la Asociación Dominicana del Este (ADE).
+                                </p>                                    
+                                <div class="content">
+                                    <div class="lista_content">
+                                        <h3>Examen a Realizar</h3>
+                                        <a href="https://forms.gle/ke8i9HBPx1MMaHND8" target="_blank">Completa el Examen Correspondiente</a>
+                                    </div>
+                                    <div class="lista_content">
+                                        <h3>Tarea Asignada</h3>
+                                        <a href="https://drive.google.com/file/d/1SuwKDpc7be1-22UOrQJyWTCezENARnih/view?usp=sharing" target="_blank">Realiza la Tarea Asignada</a>
+                                    </div>
+                                    <div class="lista_content">
+                                        <h3>Entregar Tarea</h3>
+                                        <form id="formArchivo">
+                                            <input type="file" id="archivo" required><br>
+                                            <input type="text" id="nombreArchivo" placeholder="Nombre del Archivo"><br>
+                                            <button type="submit">Entregar Tarea</button>
+                                        </form>
+                                        <p id="mensaje"></p>
+                                    </div>
+                                </div>
+                                <button>Cerrar</button>
+                            </div>                            
+                        </div>                     
                     </div>
                     <div class="Seminario basicaConquis" id="bConquis">
                         <img src="IMG/Icons/Icono_Basic_Conquis-Photoroom.png">
@@ -147,4 +149,6 @@
         </div>        
     </body>
     <script src="JS/dashboard.js"></script>
+    <script src="JS/navBar.js"></script>
+    <script src="JS/entregarTarea.js"></script>
 </html>

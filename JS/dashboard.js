@@ -30,3 +30,9 @@ function directorConqui(){
     directorA.checked = false
     directorC.checked = true
 }
+
+function desconectar(){
+    sessionStorage.setItem("Codigo", null)
+    sessionStorage.setItem("Nombre", null)
+    window.location.href = "index.html"
+}

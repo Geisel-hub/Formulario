@@ -146,6 +146,43 @@ a:hover i{
     color: #fff;
     transition: all 0.5s ease;
 }
+.listaTalleres{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.listaTalleres .content{
+    display: flex;
+    align-items:start;
+}
+.taller{
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}.taller h2{
+    margin-bottom: 15px;
+}
+.taller iframe{
+    padding: 15px 0px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+.taller p{
+    padding: 15px 0px;
+    text-align: left;
+}
+.cbTaller{
+    display: none;
+}
 #basicoAvent:checked ~ .basicaAvent{
     display: block;
 }
