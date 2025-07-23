@@ -30,124 +30,33 @@
                 </ul>
             </nav>
 
-            <section class="main">                
-                
+            <section class="main" id="section">
                 <div class="main-top">
                     <h1 id="user">Certificaciones</h1>
                 </div>
-                <div class="certificaciones">
-                    <input type="checkbox" name="basicoAvent" id="basicoAvent" style="display: none;">
-                    <input type="checkbox" name="basicoConqu" id="basicoConqu" style="display: none;">
-                    <input type="checkbox" name="directAvent" id="directAvent" style="display: none;">
-                    <input type="checkbox" name="directConqu" id="directConqu" style="display: none;">
-                    <div class="Seminario basicaAvent" id="bAvent">
-                        <img src="IMG/Icons/Icono_Basic_Aventu-Photoroom.png">
-                        <h4>ADV 001: Propósito, Historia y la Iglesia</h4>
-                        <p>Certificación Básica Aventureros</p>
-                        <div class="per">
-                            <table>
-                                <tr>
-                                    <td><span>85%</span></td>
-                                    <td><span>87%</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Examen</td>
-                                    <td>Tarea</td>
-                                </tr>
-                            </table>
+                <!--<div class="taller" id="ADV001">
+                    <div class="content-taller">
+                        <h3>Titulo Taller</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ratione optio dignissimos? Modi itaque ex maxime id velit laudantium aperiam!</p>
+                        <div class="asignaciones">
+                            <div class="asignacion">
+                                <h4>Realiza el Examen</h4>
+                                <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">Examen de la Asignación</a>
+                            </div>
+                            <div class="asignacion">
+                                <h4>Realiza la Tarea</h4>
+                                <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">Decarga la Tarea</a>
+                                <input type="file" id="f-ADV001" accept="application/pdf">
+                                <button onclick="subirArchivo('f-ADV001')">Entregar</button>
+                            </div>
                         </div>
-                        <button value="0" onclick="">Ver Seminario</button>
-                        <!--En esta sección cargaremos el Certificado-->
-                        <div class="listaTalleres">
-                            <input type="checkbox" id="ADV001" class="cbTaller">
-                            <div class="taller ADV001">
-                                <h2>Titulo del Certificado</h2>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/vrFoiwRk67U?si=pqMa6CPIXwL_qrnw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" style="width: 100%;" allowfullscreen></iframe>
-                                <p>Este taller presenta una introducción al ministerio del club desde la perspectiva del Club de Aventureros. Compara y contrasta el programa y el propósito del Club de Aventureros y su papel en el desarrollo de la fe. Este ministerio involucra el ministerio de la familia, el ministerio infantil y el ministerio del Club de Conquistadores. <br>
-                                   1er Seminario de la Certificación Básica para lideres de Aventureros (EMC). <br>
-                                   Ministerios Juveniles de  la Asociación Dominicana del Este (ADE).
-                                </p>                                    
-                                <div class="content">
-                                    <div class="lista_content">
-                                        <h3>Examen a Realizar</h3>
-                                        <a href="https://forms.gle/ke8i9HBPx1MMaHND8" target="_blank">Completa el Examen Correspondiente</a>
-                                    </div>
-                                    <div class="lista_content">
-                                        <h3>Tarea Asignada</h3>
-                                        <a href="https://drive.google.com/file/d/1SuwKDpc7be1-22UOrQJyWTCezENARnih/view?usp=sharing" target="_blank">Realiza la Tarea Asignada</a>
-                                    </div>
-                                    <div class="lista_content">
-                                        <h3>Entregar Tarea</h3>
-                                        <form id="formArchivo">
-                                            <input type="file" id="archivo" required><br>
-                                            <input type="text" id="nombreArchivo" placeholder="Nombre del Archivo"><br>
-                                            <button type="submit">Entregar Tarea</button>
-                                        </form>
-                                        <p id="mensaje"></p>
-                                    </div>
-                                </div>
-                                <button>Cerrar</button>
-                            </div>                            
-                        </div>                     
+                        <button onclick="desactivarSeminario('ADV001')">Cerrar</button>
                     </div>
-                    <div class="Seminario basicaConquis" id="bConquis">
-                        <img src="IMG/Icons/Icono_Basic_Conquis-Photoroom.png">
-                        <h4>ADV 001: Propósito, Historia y la Iglesia</h4>
-                        <p>Certificación Básica Conquistadores/Guías</p>
-                        <div class="per">
-                            <table>
-                                <tr>
-                                    <td><span>85%</span></td>
-                                    <td><span>87%</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Examen</td>
-                                    <td>Tarea</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <button value="0" onclick="">Ver Seminario</button>
-                    </div>
-                    <div class="Seminario directorAvent" id="dAvent">
-                        <img src="IMG/Icons/Icono_Director_Aventu.jpg-Photoroom.png">
-                        <h4>LEAD 001: Introducción a las Habilidades de Liderazgo</h4>
-                        <p>Certificación Directores de Aventureros</p>
-                        <div class="per">
-                            <table>
-                                <tr>
-                                    <td><span>85%</span></td>
-                                    <td><span>87%</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Examen</td>
-                                    <td>Tarea</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <button value="0" onclick="">Ver Seminario</button>
-                    </div>
-                    <div class="Seminario directorConquis" id="dConqui">
-                        <img src="IMG/Icons/Icono_Director_Conquis-Photoroom.png">
-                        <h4>LEAD 001: Introducción a las Habilidades de Liderazgo</h4>
-                        <p>Certificación Directores de Conquistadores/Guías</p>
-                        <div class="per">
-                            <table>
-                                <tr>
-                                    <td><span>85%</span></td>
-                                    <td><span>87%</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Examen</td>
-                                    <td>Tarea</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <button value="0" onclick="">Ver Seminario</button>
-                    </div>
-                </div>
+                </div>-->
             </section>
         </div>        
     </body>
+    <script src="JS/actividad.js"></script>
     <script src="JS/dashboard.js"></script>
     <script src="JS/navBar.js"></script>
     <script src="JS/entregarTarea.js"></script>

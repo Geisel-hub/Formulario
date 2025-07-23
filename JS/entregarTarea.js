@@ -1,28 +1,40 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbwdvTQ4Hwq6_r9r-Ai0YhYB6uvvlectgVmNugWhLU4rKvfDLmHeXOn21Z0nZ0yHCPBzow/exec"
+const clouName = 'dv0gvojyg'
+const uploadPreset = 'public_upload'
 
-document.getElementById("formArchivo").addEventListener("submit", async function(e) {
-    e.preventDefault()
+async function subirArchivo(fileInput){
+    const archivo = document.getElementById(fileInput).files[0]
+    /*const resultado = document.getElementById(result)
+
+    if(!archivo){
+        resultado.textContent = "Selecciona un Archivo PDF."
+        return
+    }*/
+
+    const url = `https://api.cloudinary.com/v1_1/${clouName}/raw/upload`
     
-    const file = document.getElementById("archivo").files[0]
-    const nombre = document.getElementById("nombreArchivo").value || file.name
+    const formData = new FormData()
+    formData.append('file', archivo)
+    formData.append('upload_preset', uploadPreset)
 
-    const reader = new FileReader()
-    reader.onload = async function() {
-        const base64 = reader.result.split(",")[1]
+    //resultado.textContent = "⏳ Subiendo tarea..."
 
-        const formData = new FormData()
-        formData.append("archivoBase64", base64)
-        formData.append("nombreArchivo", nombre)
-        formData.append("tipoMime", file.type)
-
-        const response = await fetch(scriptURL, {
-            method: "POST",
+    try{
+        const response = await fetch(url, {
+            method: 'POST',
             body: formData
         })
 
-        const texto = await response.text()
-        document.getElementById("mensaje").textContent = texto
-    }
+        const data = await response.json()
 
-    reader.readAsDataURL(file)
-})
+        if(data.secure_url){
+            //resultado.textContent = "✅ Archivo subido con éxito"
+            alert("✅ Archivo subido con éxito")
+        }else{
+            //resultado.textContent = "❌ Error:\n" + JSON.stringify(data, null, 2)
+            alert("❌ Error:\n" + JSON.stringify(data, null, 2))
+        }
+    }catch(error){
+        //resultado.textContent = "❌ Error de red:\n" + error.message
+        alert("❌ Error de red:\n" + error.message)
+    }
+}
