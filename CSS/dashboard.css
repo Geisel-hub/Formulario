@@ -100,11 +100,12 @@ a:hover i{
     float: left;
     flex-wrap: wrap;
     margin-top: 10px;
+    transition: all .5s ease;
 }
 .card{
     max-width: 325px;
     width: 100%;
-    min-height: 260px;
+    min-height: 346px;
     height: 100%;
     background-color: #fff;
     border-radius: 8px;
@@ -135,7 +136,7 @@ a:hover i{
     background-color: #333;
     text-decoration: none;
     border-radius: 4px;
-    margin-top: 16px;
+    margin-top: 10px;
     color: #fff;
     cursor: pointer;
     transition: all 0.5s ease;
@@ -146,7 +147,7 @@ a:hover i{
 }
 .taller .content-taller button{
     margin-top: 5px;
-    padding: 10px 15px;
+    padding: 5px 10px;
     background-color: #5488a3;
     color: #fff;
     border-radius: 4px;
@@ -189,4 +190,14 @@ a:hover i{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+.asignaciones .asignacion{
+    float: left;
+    width: 45%;
+}
+.asignaciones .asignacion a{
+    font-size: 0.6rem;
+}
+.asignaciones .asignacion:nth-child(1){
+    border-right: solid 1px #666;
 }

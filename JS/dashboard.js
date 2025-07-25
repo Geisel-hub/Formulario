@@ -1,3 +1,4 @@
+let player
 
 function basicaAvent(){
     const AventurerosBasica = document.getElementsByName('ADV-Basico')
@@ -19,6 +20,8 @@ function basicaAvent(){
     for(let i = 0; i < ConquistadoresDirector.length; i++){
         ConquistadoresDirector[i].style.display = "none"
     }
+
+    activacion = 1
 }
 
 function basicaConqui(){
@@ -41,6 +44,8 @@ function basicaConqui(){
     for(let i = 0; i < ConquistadoresDirector.length; i++){
         ConquistadoresDirector[i].style.display = "none"
     }
+
+    activacion = 2
 }
 
 function directorAvent(){
@@ -63,6 +68,8 @@ function directorAvent(){
     for(let i = 0; i < ConquistadoresDirector.length; i++){
         ConquistadoresDirector[i].style.display = "none"
     }
+
+    activacion = 3
 }
 
 function directorConqui(){
@@ -85,6 +92,8 @@ function directorConqui(){
     for(let i = 0; i < ConquistadoresDirector.length; i++){
         ConquistadoresDirector[i].style.display = "flex"
     }
+
+    activacion = 4
 }
 
 function desconectar(){
@@ -93,7 +102,7 @@ function desconectar(){
     window.location.href = "index.html"
 }
 
-function activarSeminario(taller){
+function activarSeminario(taller, video){
     const clase = document.getElementById(taller)
     clase.style.display = "flex"
 }
@@ -101,4 +110,9 @@ function activarSeminario(taller){
 function desactivarSeminario(taller){
     const clase = document.getElementById(taller)
     clase.style.display = "none"
+    window.location.reload()
+    /*console.log(player)
+    if(player){
+        player.stopVideo()
+    }*/
 }

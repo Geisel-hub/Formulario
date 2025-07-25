@@ -6,7 +6,7 @@ function Reiniciar(){
         sessionStorage.clear()
         alert('La Session a expirado')
         location.reload()
-    }, 5 * 60 * 1000)
+    }, 30 * 60 * 1000)
 }
 
 window.onload = Reiniciar()

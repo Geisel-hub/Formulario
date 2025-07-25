@@ -37,27 +37,27 @@ if(Nombre){
                             const div = document.createElement("div")
                             div.innerHTML = `<div class="card-seminarios" name="${row.Codigo}">
                                              <div class="card">
-                                             <img src="${fila.logoCapacitacion}">
+                                             <img src="IMG/Icons/${fila.logoCapacitacion}">
                                              <div class="card-content">
                                              <h3>${fila.tituloSeminario}</h3>
                                              <p>${fila.descripcionYoutube}</p>
-                                             <button onclick="activarSeminario('${fila.codigoSeminario}')">Ver Seminario</button>
+                                             <button onclick="activarSeminario('${fila.codigoSeminario}', 'v-${fila.codigoSeminario}')">Ver Seminario</button>
                                              </div>
                                              <div class="taller" id="${fila.codigoSeminario}">
                                              <div class="content-taller">
                                              <h3>${fila.tituloSeminario}</h3>
-                                             ${fila.frameYoutube}
+                                             <iframe id="v-${fila.codigoSeminario}" width="500" height="300" src="${fila.frameYoutube}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                              <p>${fila.descripcionYoutube}</p>
                                              <div class="asignaciones">
                                              <div class="asignacion">
-                                             <h4>Realiza el Examen</h4>
+                                             <h5>Realiza el Examen</h5>
                                              <a href="${fila.linkExamen}" target="_blank" rel="noopener noreferrer">Examen de la Asignación</a>
                                              </div>
                                              <div class="asignacion">
-                                             <h4>Realiza la Tarea</h4>
+                                             <h5>Realiza la Tarea</h5>
                                              <a href="${fila.linkTarea}" target="_blank" rel="noopener noreferrer">Decarga la Tarea</a>
-                                             <input type="file" id="f-${row.Codigo}" accept="application/pdf">
-                                             <button onclick="subirArchivo('f-${row.Codigo}')">Entregar Tarea</button>
+                                             <input type="file" id="${fila.tareaArchivo}" accept="application/pdf">
+                                             <button onclick="subirArchivo('${fila.tareaArchivo}', '${Codigo}')">Entregar Tarea</button>
                                              </div>
                                              </div>
                                              <button onclick="desactivarSeminario('${fila.codigoSeminario}')">Cerrar</button>
